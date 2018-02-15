@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HangMan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="chalkboard">
+        <img id="boardimage" src="assets/images/chalkboard.png">
+        <div id="boardspace" class="row">
+            <div id="gallows" class="col-md-4">
+                <h2>Gallows</h2>
+            </div>
+            <div id="halfboard" class="col-md-8">
+                <div class="row">
+                    <div id="blanks" class="col-md-12" >
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="guessedLetters" class="col-md-12" >
+                        <h2>Guessed Letters:</h2>
+                        <h2 id="franklin"></h2>
+                        <h2 id="gameMessage">Press any key to play.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
