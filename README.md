@@ -10,3 +10,7 @@ Guess any character. You can guess numbers if you want, but it'll tell you not t
 '<inline code>'
   'inline code'
   <inline code>
+### To-dos
+    -[] add option for user to generate word (letters only) when they win
+    -[] add computer auto-guessing letters
+    -[] hand-off of control when computer loses
