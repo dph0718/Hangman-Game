@@ -62,9 +62,9 @@ var pickWord = function () {
 function makeWordArray(y) {
     wordLength = y.length;
     for (var i = 0; i < wordLength; i++) {
-        wordArray.push("_  ");
+        wordArray.push("_ ");
         wordLetterArray.push(y[i]);
-        document.querySelector("#blanks").innerHTML = wordArray;
+        document.querySelector("#blanks").innerHTML = wordArray.join(" ");
     }
 }
 //Checks if input is a letter, and if it's included in the selected word
@@ -78,7 +78,7 @@ var checkLetter = function (letter) {
                 if (wordLetterArray.indexOf(letter) == i) {
                     wordLetterArray.splice(i, 1, "null");
                     wordArray.splice(i, 1, letter);
-                    document.querySelector('#blanks').innerHTML = wordArray;
+                    document.querySelector('#blanks').innerHTML = wordArray.join(" ");
                 }
             }
             //adds the correct guess to the rightLetters array
@@ -92,7 +92,7 @@ var checkLetter = function (letter) {
             return;
         } else if (!wordLetterArray.includes(letter) && !guessedLetters.includes(letter)) {
             guessedLetters.push(letter);
-            document.querySelector('#franklin').innerHTML = guessedLetters;
+            document.querySelector('#franklin').innerHTML = guessedLetters.join(", ");
             alert("Nope!");
             return;
         }
@@ -109,7 +109,7 @@ var isNull = function (x) {
 var checkWin = function () {
     //more than 6 guesses and you lose
     if (guessedLetters.length > 6) {
-        document.querySelector('#gameMessage').innerHTML = "You lost. The word was &quot;" + word + "&quot;";
+        document.querySelector('#gameMessage').innerHTML = "You lost. The word was &quot;" + word + ".&quot;";
         gameState = "lose";
     //but if every letter from the selected word has been replaced with 'null', you win.
     } else if (wordLetterArray.every(isNull)) {
@@ -174,7 +174,7 @@ function start() {
 
 
 function playGame() {
-    document.querySelector('#blanks').innerHTML = wordArray;
+    document.querySelector('#blanks').innerHTML = wordArray.join(" ");
     document.querySelector('#franklin').innerHTML = guessedLetters;
     document.onkeyup = function () {
         input = event.key;
