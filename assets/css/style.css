@@ -1,10 +1,29 @@
 body {
-    background-color: rgb(77, 51, 51);
+    background-color: rgb(128, 139, 168);
+    background-image: url("../images/window.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 #chalkboard {
-    margin: auto;
+    margin: auto auto auto auto;
     width: 60%;
+
+
+}
+
+#boardspace {
+    width: 600px;
+    height: 580px;
+    margin: auto;
+    font-family: 'finger paint', 'ms comic sans';
+    color: white;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 #boardimage {
@@ -12,16 +31,15 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    width: 60%;
+    width: 820px;
     height: auto;
     z-index: -1;
 }
 
 #gallows {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: space-around;
+    height: 230px;
 }
 
 #halfboard{
@@ -30,25 +48,25 @@ body {
     font-size: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #guessedLetters {
-    position: absolute;
-    top: 150px;
-    left: 32px;
+    font-size: 32px;
+    text-align: center;
 }
 
-#gameMessage {
-    position: absolute;
-    top: 200px;
-    width: 400px;
-    left: 32px;
+#gameMessage, #blanks {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+}
+
+#franklin {
+    text-align: left;
 }
 
 #blanks {
-    position: absolute;
-    top: 50px;
-    left: -32px;
 }
 

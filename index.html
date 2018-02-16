@@ -12,8 +12,20 @@
 <body>
     <div id="chalkboard">
         <img id="boardimage" src="assets/images/chalkboard.png">
-        <div id="boardspace" class="row">
-            <div id="gallows" class="col-md-4">
+        <div id="boardspace">
+            <div class ="row" id="gameMessage">Recess is inside today because of rain. Press any key to play hangman!</div>
+            <div class='row' id="blanks"></div>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <img class="img-responsive" id="gallows" src="./assets/images/gallows-1.png">
+                </div>
+                <div class='col-md-6' id="guessedLetters">Guessed letters:
+                    <h2 id="franklin"></h2>
+                </div>
+            </div>
+            <!-- delete things below this line (within this div), if everthing above it works. -->
+            <!-- --------------------------------- -->
+            <!-- <div id="gallows" class="col-md-4">
                 <h2>Gallows</h2>
             </div>
             <div id="halfboard" class="col-md-8">
@@ -29,7 +41,8 @@
                         <h2 id="gameMessage">Press any key to play.</h2>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <!-- ----------------------- -->
         </div>
     </div>
     <script src="assets/javascript/game.js"></script>

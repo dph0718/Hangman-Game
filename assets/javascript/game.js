@@ -7,11 +7,11 @@ var words = [
     "apple",
     "toilet",
     "television",
-    "sassafras",
+    "recess",
     "soup",
-    "barracuda",
+    "banana",
     "computer",
-    "destiny",
+    "rain",
     "clothespin",
     "hamper",
     "gumshoe",
@@ -19,7 +19,14 @@ var words = [
     "bologna",
     "horsefeathers",
     "pneumatic",
-    "fluoride"
+    "fluoride",
+    "thematic",
+    "irrelevant",
+    "nasty",
+    "horse",
+    "horseshoe",
+    "desk",
+    "fireplace"
 ];
 
 //Array of acceptable letters for input
@@ -46,6 +53,19 @@ var again = false;
 var word;
 //var for storing length of word
 var wordLength;
+//gallows images
+var gallowsImages = [
+    "./assets/images/gallows-1.png",
+    "./assets/images/gallows-2.png",
+    "./assets/images/gallows-3.png",
+    "./assets/images/gallows-4.png",
+    "./assets/images/gallows-5.png",
+    "./assets/images/gallows-6.png",
+    "./assets/images/gallows-7.png",
+    "./assets/images/gallows-8.png"
+]
+//iterates through gallows images
+var imageCounter = 0;
 
 //gives a random integer between 0 and x
 var randomNum = function (x) {
@@ -93,6 +113,8 @@ var checkLetter = function (letter) {
         } else if (!wordLetterArray.includes(letter) && !guessedLetters.includes(letter)) {
             guessedLetters.push(letter);
             document.querySelector('#franklin').innerHTML = guessedLetters.join(", ");
+            imageCounter ++;
+            document.querySelector('#gallows').src = gallowsImages[imageCounter];
             alert("Nope!");
             return;
         }
@@ -161,8 +183,9 @@ detectStart = function () {
 
 function start() {
     document.querySelector('#gameMessage').innerHTML = "Choose any letter.";
+    imageCounter = 0;
+    document.querySelector('#gallows').src = gallowsImages[imageCounter];
     guessedLetters = [];
-    // document.querySelector('#franklin').innerHTML = guessedLetters;
     wordArray = [];
     wordLetterArray = [];
     rightLetters = [];
